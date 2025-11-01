@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "aws-lambda"],
     "target": "es2022",
     "module": "es2022",
     "moduleResolution": "bundler",
@@ -8,10 +9,11 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "paths": {
-      "$amplify/*": [
-        "../.amplify/generated/*"
-      ]
-    }
-  }
+    "paths": { "$amplify/*": ["../.amplify/generated/*"] }
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.d.ts",
+    "../.amplify/**/*.ts"
+  ]
 }
